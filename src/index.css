@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 96%;
+    --foreground: 0 0% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
+
+    --primary: 37 55% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 20% 94%;
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 40 15% 92%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 72% 51%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 37 55% 42%;
+
+    --radius: 0.75rem;
+
+    --gold: 37 55% 42%;
+    --gold-light: 40 50% 55%;
+    --gold-dark: 37 60% 30%;
+    --cream: 40 30% 95%;
+    --dark: 0 0% 10%;
+    --dark-overlay: 0 0% 0%;
+    --success: 145 63% 42%;
+    --urgency-bg: 0 85% 97%;
+    --urgency-text: 0 72% 51%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans Bengali', sans-serif;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-foreground text-center;
+  }
+
+  .gold-divider {
+    @apply w-20 h-1 mx-auto mt-3 rounded-full;
+    background: linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)));
+  }
+
+  .glass-card {
+    @apply rounded-xl border border-border/50;
+    background: hsla(0, 0%, 100%, 0.7);
+    backdrop-filter: blur(10px);
+  }
+
+  .gold-btn {
+    @apply px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
+    color: hsl(var(--primary-foreground));
+    box-shadow: 0 4px 15px hsla(37, 55%, 42%, 0.3);
+  }
+
+  .gold-btn:hover {
+    box-shadow: 0 6px 20px hsla(37, 55%, 42%, 0.5);
+    transform: translateY(-1px);
+  }
+
+  .feature-icon {
+    @apply w-14 h-14 rounded-full flex items-center justify-center;
+    background: hsl(var(--cream));
+    color: hsl(var(--gold));
+  }
+
+  .size-chip {
+    @apply px-5 py-2.5 rounded-lg border-2 cursor-pointer transition-all font-semibold text-base;
+    border-color: hsl(var(--border));
+    color: hsl(var(--foreground));
+  }
+
+  .size-chip.active {
+    background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
+    color: hsl(var(--primary-foreground));
+    border-color: hsl(var(--gold));
+  }
+
+  .color-chip {
+    @apply px-5 py-2.5 rounded-lg border-2 cursor-pointer transition-all font-semibold text-base;
+    border-color: hsl(var(--border));
+    color: hsl(var(--foreground));
+  }
+
+  .color-chip.active {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+    border-color: hsl(var(--accent));
+  }
+
+  .hijab-chip {
+    @apply px-8 py-3 rounded-lg border-2 cursor-pointer transition-all font-semibold text-base flex-1 text-center;
+    border-color: hsl(var(--border));
+    color: hsl(var(--foreground));
+  }
+
+  .hijab-chip.active {
+    background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
+    color: hsl(var(--primary-foreground));
+    border-color: hsl(var(--gold));
+  }
+}
