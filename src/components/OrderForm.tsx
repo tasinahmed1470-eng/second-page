@@ -296,7 +296,7 @@ const OrderForm = () => {
           </div>
           <div>
             <p className="text-sm font-bold text-foreground mb-2">বিশেষ নির্দেশনা (ঐচ্ছিক):</p>
-            <textarea placeholder="সাইজ বা কালার নিয়ে কিছু বলার থাকলে লিখুন..." value={notes} onChange={(e) => setNotes(e.target.value)} rows={2} className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground resize-none" />
+            <textarea placeholder="একাধিক বোরকা নিতে চাইলে এখানে কালার ও সাইজ লিখে দিন..." value={notes} onChange={(e) => setNotes(e.target.value)} rows={2} className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground resize-none" />
           </div>
         </div>
 
