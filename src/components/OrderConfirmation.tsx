@@ -30,11 +30,12 @@ const OrderConfirmation = () => {
               <CheckCircle className="w-12 h-12 text-primary" />
             </div>
           </div>
-          <h1 className="text-2xl font-bold text-foreground">
-            আপনার অর্ডার টি কনফার্ম করা হয়েছে
-          </h1>
+          <h2 className="text-2xl font-bold text-foreground">
+               সাবমিট হয়েছে, অর্ডারটি কনফার্ম করতে কল করা হবে
+          </h2>
           <p className="text-muted-foreground text-sm">
-            আমাদের টিম শীঘ্রই আপনার সাথে যোগাযোগ করবে।
+           🚨নোট : অর্ডার কনফার্ম এর পর পার্সেল না নিলে ডেলিভারি চার্জ দেওয়া বাধ্যতামূলক।
+             দয়া করে দায়িত্বশীলতার সাথে অর্ডার করুন, ফেক/ভুয়া অর্ডারকারীদের বিরুদ্ধে আইনি ব্যবস্থা নেওয়া হবে।
           </p>
         </div>
 
